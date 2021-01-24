@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.bughub.flt_telephony_info_example">
+    package="me.AliAzim.flutter_telephony_example">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -9,10 +9,12 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flt_telephony_info_example"
+        android:label="flutter_telephony_example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -2,11 +2,12 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class FltTelephonyInfo {
-  static const MethodChannel _channel = const MethodChannel('bughub.dev/flt_telephony_info');
+  static const MethodChannel _channel =
+      const MethodChannel('bughub.dev/flutter_telephony');
 
   static Future<TelephonyInfo> get info async {
-    final TelephonyInfo telephonyInfo =
-        TelephonyInfo.fromMap(await _channel.invokeMapMethod<String, dynamic>('getTelephonyInfo'));
+    final TelephonyInfo telephonyInfo = TelephonyInfo.fromMap(
+        await _channel.invokeMapMethod<String, dynamic>('getTelephonyInfo'));
     print(telephonyInfo.toString());
     return telephonyInfo;
   }
@@ -133,6 +134,7 @@ class TelephonyInfo {
     this.simOperator,
     this.simOperatorName,
     this.simSerialNumber,
+    this.cellInfo,
   });
 
   ///当前电话状态
@@ -209,6 +211,9 @@ class TelephonyInfo {
   String simOperatorName;
   String simSerialNumber;
 
+  //CELL INFO
+  CellInfo cellInfo;
+
   static Map<String, dynamic> _map;
 
   static TelephonyInfo fromMap(Map<String, dynamic> map) {
@@ -238,6 +243,7 @@ class TelephonyInfo {
       simOperator: map["simOperator"],
       simOperatorName: map["simOperatorName"],
       simSerialNumber: map["simSerialNumber"],
+      cellInfo: CellInfo.fromList(map["allCellInfo"]) ?? null,
     );
   }
 
@@ -273,6 +279,43 @@ class TelephonyInfo {
         "\nsimOperator:$simOperator,"
         "\nsimOperatorName:$simOperatorName,"
         "\nsimSerialNumber:$simSerialNumber"
+        "\ncellInfo.radio:${cellInfo.radio}"
+        "\ncellInfo.mcc:${cellInfo.mcc}"
+        "\ncellInfo.mnc:${cellInfo.mnc}"
+        "\ncellInfo.tac:${cellInfo.tac}"
+        "\ncellInfo.ci:${cellInfo.ci}"
+        "\ncellInfo.pci:${cellInfo.pci}"
         "\n}";
+  }
+}
+
+class CellInfo {
+  var radio;
+  var mcc;
+  var mnc;
+  var tac;
+  var ci;
+  var pci;
+  // var cells;
+  // var address;
+
+  CellInfo._({
+    this.mcc,
+    this.mnc,
+    this.radio,
+    this.tac,
+    this.ci,
+    this.pci,
+  });
+
+  static CellInfo fromList(List<dynamic> list) {
+    return CellInfo._(
+      radio: list != null ? list[0] : null,
+      mcc: list != null ? list[1] : null,
+      mnc: list != null ? list[2] : null,
+      tac: list != null ? list[3] : null,
+      ci: list != null ? list[4] : null,
+      pci: list != null ? list[5] : null,
+    );
   }
 }

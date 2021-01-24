@@ -1,4 +1,4 @@
-# flt_telephony_info
+# flutter_telephony
 
 get telephony info：
 
@@ -7,19 +7,19 @@ Android:based on TelephonyManager
 iOS：based on [CoreTelephony](https://developer.apple.com/documentation/coretelephony)
 
 
-## ENGLISH    |     [中文](https://github.com/RandyWei/flt_telephony_info/blob/master/README_CN.md)
+## ENGLISH    |     [中文](https://github.com/RandyWei/flutter_telephony/blob/master/README_CN.md)
 
 ## Installation
 ```
 //pub
 dependencies:
-  flt_telephony_info: any
+  flutter_telephony: any
 
 //import
 dependencies:
-  flt_telephony_info:
+  flutter_telephony:
     git:
-      url: git://github.com/RandyWei/flt_telephony_info.git
+      url: git://github.com/RandyWei/flutter_telephony.git
 ```
 
 ## Android
@@ -113,7 +113,7 @@ The mobile network code for the user’s cellular service provider.
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flt_telephony_info/flt_telephony_info.dart';
+import 'package:flutter_telephony/flutter_telephony.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flt_telephony_info/flt_telephony_info.dart';
+import 'package:flutter_telephony/flutter_telephony.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('flt_telephony_info');
+  const MethodChannel channel = MethodChannel('flutter_telephony');
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {

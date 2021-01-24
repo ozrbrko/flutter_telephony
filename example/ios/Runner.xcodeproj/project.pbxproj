@@ -411,7 +411,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.bughub.fltTelephonyInfoExample;
+				PRODUCT_BUNDLE_IDENTIFIER = me.AliAzim.fltTelephonyInfoExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -536,7 +536,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.bughub.fltTelephonyInfoExample;
+				PRODUCT_BUNDLE_IDENTIFIER = me.AliAzim.fltTelephonyInfoExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -559,7 +559,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.bughub.fltTelephonyInfoExample;
+				PRODUCT_BUNDLE_IDENTIFIER = me.AliAzim.fltTelephonyInfoExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

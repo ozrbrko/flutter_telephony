@@ -1,18 +1,18 @@
-# flt_telephony_info_example
+# flutter_telephony_example
 
-Demonstrates how to use the flt_telephony_info plugin.
+Demonstrates how to use the flutter_telephony plugin.
 
 ## 使用
 ```
 //pub
 dependencies:
-  flt_telephony_info: ^lastest_version
+  flutter_telephony: ^lastest_version
 
 //import
 dependencies:
-  flt_telephony_info:
+  flutter_telephony:
     git:
-      url: git://github.com/RandyWei/flt_telephony_info.git
+      url: git://github.com/RandyWei/flutter_telephony.git
 ```
 
 ## Android
@@ -59,7 +59,7 @@ dependencies:
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flt_telephony_info/flt_telephony_info.dart';
+import 'package:flutter_telephony/flutter_telephony.dart';
 
 void main() => runApp(MyApp());
 

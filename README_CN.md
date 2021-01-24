@@ -1,4 +1,4 @@
-# flt_telephony_info
+# flutter_telephony
 
 获取SIM卡信息：
 
@@ -7,19 +7,19 @@ Android:基于TelephonyManager
 iOS：基于[CoreTelephony](https://developer.apple.com/documentation/coretelephony)
 
 
-## [ENGLISH](https://github.com/RandyWei/flt_telephony_info/blob/master/README.md)    |     中文
+## [ENGLISH](https://github.com/RandyWei/flutter_telephony/blob/master/README.md)    |     中文
 
 ## 使用
 ```
 //pub
 dependencies:
-  flt_telephony_info: any
+  flutter_telephony: any
 
 //import
 dependencies:
-  flt_telephony_info:
+  flutter_telephony:
     git:
-      url: git://github.com/RandyWei/flt_telephony_info.git
+      url: git://github.com/RandyWei/flutter_telephony.git
 ```
 
 ## Android
@@ -69,7 +69,7 @@ iOS 由于隐私,无法获取手机号
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flt_telephony_info/flt_telephony_info.dart';
+import 'package:flutter_telephony/flutter_telephony.dart';
 
 void main() => runApp(MyApp());
 

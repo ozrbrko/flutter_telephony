@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flt_telephony_info/flt_telephony_info.dart';
+import 'package:flutter_telephony/flutter_telephony.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Phone Number: ${_info?.line1Number}\n'),
+          child: Text(_info.toString()),
         ),
       ),
     );

@@ -1,5 +1,5 @@
-name: flt_telephony_info_example
-description: Demonstrates how to use the flt_telephony_info plugin.
+name: flutter_telephony_example
+description: Demonstrates how to use the flutter_telephony plugin.
 publish_to: 'none'
 
 environment:
@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flt_telephony_info:
+  flutter_telephony:
     path: ../
 
 # For information on the generic Dart part of this file, see the

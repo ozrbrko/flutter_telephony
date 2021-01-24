@@ -1,4 +1,4 @@
-package dev.bughub.flt_telephony_info
+package me.AliAzim.flutter_telephony
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,12 +12,20 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import me.AliAzim.flutter_telephony.model.request.Cell
+import me.AliAzim.flutter_telephony.model.request.CellInfo
+import me.AliAzim.flutter_telephony.model.request.RadioType
+import android.telephony.CellInfoGsm
+import android.telephony.CellInfoLte
+import android.telephony.CellInfoWcdma
+
+val cellInfo = mutableListOf<String>();
 
 class FltTelephonyInfoPlugin(var registrar: Registrar) : MethodCallHandler {
     companion object {
         @JvmStatic
         fun registerWith(registrar: Registrar) {
-            val channel = MethodChannel(registrar.messenger(), "bughub.dev/flt_telephony_info")
+            val channel = MethodChannel(registrar.messenger(), "bughub.dev/flutter_telephony")
             channel.setMethodCallHandler(FltTelephonyInfoPlugin(registrar))
         }
     }
@@ -240,10 +248,102 @@ class FltTelephonyInfoPlugin(var registrar: Registrar) : MethodCallHandler {
             if (ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.READ_PHONE_STATE) == PERMISSION_GRANTED)
                 resultMap["simSerialNumber"] = telephonyManager.simSerialNumber
 
+            //CELL INFO
+            if (ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.READ_PHONE_STATE) == PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) == PERMISSION_GRANTED
+                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                val allCellInfo = telephonyManager.allCellInfo
+//                List<CellInfo> cf ;
+                allCellInfo.forEach{
+                    when (it) {
+                        is CellInfoGsm -> getCellInfo(it)
+                        is CellInfoWcdma -> getCellInfo(it)
+                        is CellInfoLte -> getCellInfo(it)
+                        else -> null
+                    }
+                }
+//                println(telephonyManager.allCellInfo[0])
+                resultMap["allCellInfo"] = cellInfo
+            }
+
+
 
             result.success(resultMap)
         } else {
             result.notImplemented()
         }
     }
+}
+
+
+fun getCellInfo(info: CellInfoGsm): MutableList<String> {
+    info.cellIdentity.let {
+        val (mcc, mnc) = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            Pair(it.mccString?.toInt() ?: 0, it.mncString?.toInt() ?: 0)
+        } else {
+            Pair(it.mcc, it.mnc)
+        }
+//        cellInfo.mcc = mcc
+//        cellInfo.mnc = mnc
+//        cellInfo.cells = listOf(Cell(it.lac, it.cid, it.psc))
+        if (mcc!=0||mnc!=0){
+            cellInfo.clear()
+            cellInfo.add(RadioType.GSM)
+            cellInfo.add(mcc.toString())
+            cellInfo.add(mnc.toString())
+            cellInfo.add(it.lac.toString())
+            cellInfo.add(it.cid.toString())
+            cellInfo.add(it.psc.toString())
+        }
+    }
+
+    return cellInfo
+}
+
+fun getCellInfo(info: CellInfoWcdma): MutableList<String> {
+
+    info.cellIdentity.let {
+        val (mcc, mnc) = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            Pair(it.mccString?.toInt() ?: 0, it.mncString?.toInt() ?: 0)
+        } else {
+            Pair(it.mcc, it.mnc)
+        }
+//        cellInfo.mcc = mcc
+//        cellInfo.mnc = mnc
+//        cellInfo.cells = listOf(Cell(it.lac, it.cid, it.psc))
+        if (mcc!=0||mnc!=0){
+            cellInfo.clear()
+            cellInfo.add(RadioType.CDMA)
+            cellInfo.add(mcc.toString())
+            cellInfo.add(mnc.toString())
+            cellInfo.add(it.lac.toString())
+            cellInfo.add(it.cid.toString())
+            cellInfo.add(it.psc.toString())
+        }
+    }
+
+
+    return cellInfo
+}
+
+fun getCellInfo(info: CellInfoLte):MutableList<String>{
+    info.cellIdentity.let {
+        val (mcc, mnc) = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            Pair(it.mccString?.toInt() ?: 0, it.mncString?.toInt() ?: 0)
+        } else {
+            Pair(it.mcc, it.mnc)
+        }
+
+        if (mcc != 0 || mnc != 0){
+            cellInfo.clear()
+            cellInfo.add(RadioType.LTE)
+            cellInfo.add(mcc.toString())
+            cellInfo.add(mnc.toString())
+            cellInfo.add(it.tac.toString())
+            cellInfo.add(it.ci.toString())
+            cellInfo.add(it.pci.toString())
+        }
+    }
+    print(cellInfo)
+    return cellInfo
 }

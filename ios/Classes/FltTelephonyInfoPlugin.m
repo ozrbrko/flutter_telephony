@@ -5,7 +5,7 @@
 @implementation FltTelephonyInfoPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"bughub.dev/flt_telephony_info"
+      methodChannelWithName:@"bughub.dev/flutter_telephony"
             binaryMessenger:[registrar messenger]];
   FltTelephonyInfoPlugin* instance = [[FltTelephonyInfoPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];

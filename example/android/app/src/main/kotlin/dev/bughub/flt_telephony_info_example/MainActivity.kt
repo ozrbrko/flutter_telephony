@@ -1,4 +1,4 @@
-package dev.bughub.flt_telephony_info_example
+package me.AliAzim.flutter_telephony_example
 
 import android.os.Bundle
 
