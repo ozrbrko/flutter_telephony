@@ -7,7 +7,7 @@ Android:基于TelephonyManager
 iOS：基于[CoreTelephony](https://developer.apple.com/documentation/coretelephony)
 
 
-## [ENGLISH](https://github.com/RandyWei/flutter_telephony/blob/master/README.md)    |     中文
+## [ENGLISH](https://github.com/aliazimoshan/flutter_telephony/blob/master/README.md)    |     中文
 
 ## 使用
 ```
@@ -79,18 +79,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  TelephonyInfo _info;
+  FlutterTelephony _info;
 
   @override
   void initState() {
     super.initState();
-    getTelephonyInfo();
+    getFlutterTelephony();
   }
 
-  Future<void> getTelephonyInfo() async {
-    TelephonyInfo info;
+  Future<void> getFlutterTelephony() async {
+    FlutterTelephony info;
     try {
-      info = await FltTelephonyInfo.info;
+      info = await FltFlutterTelephony.info;
     } on PlatformException {}
 
     if (!mounted) return;
@@ -116,8 +116,3 @@ class _MyAppState extends State<MyApp> {
 }
 
 ```
-
-## 其他
-[作者主页](https://www.bughub.dev)
-
-[视频播放器flt_video_player](https://pub.flutter-io.cn/packages/flt_video_player)

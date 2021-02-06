@@ -21,36 +21,30 @@ import android.telephony.CellInfoWcdma
 
 val cellInfo = mutableListOf<String>();
 
-class FltTelephonyInfoPlugin(var registrar: Registrar) : MethodCallHandler {
+class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
     companion object {
         @JvmStatic
         fun registerWith(registrar: Registrar) {
             val channel = MethodChannel(registrar.messenger(), "bughub.dev/flutter_telephony")
-            channel.setMethodCallHandler(FltTelephonyInfoPlugin(registrar))
+            channel.setMethodCallHandler(FltFlutterTelephonyPlugin(registrar))
         }
     }
 
     @SuppressLint("MissingPermission")
     override fun onMethodCall(call: MethodCall, result: Result) {
-        if (call.method == "getTelephonyInfo") {
+        if (call.method == "getFlutterTelephony") {
 
             val telephonyManager = registrar.activeContext().getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
 
 
 //            if (ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.ACCESS_COARSE_LOCATION) == PERMISSION_GRANTED
 //                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-//                Log.i("getTelephonyInfo", telephonyManager.allCellInfo.toString())
+//                Log.i("getFlutterTelephony", telephonyManager.allCellInfo.toString())
 //            }
 
             val resultMap = HashMap<String, Any?>()
 
-            /**
-             * 当前电话状态
-             *
-             * {@link TelephonyManager#CALL_STATE_RINGING}
-             * {@link TelephonyManager#CALL_STATE_OFFHOOK}
-             * {@link TelephonyManager#CALL_STATE_IDLE}
-             */
+
             resultMap["callState"] = telephonyManager.callState
 
             /**

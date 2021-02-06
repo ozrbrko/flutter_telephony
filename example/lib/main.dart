@@ -11,18 +11,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  TelephonyInfo _info;
+  FlutterTelephony _info;
 
   @override
   void initState() {
     super.initState();
-    getTelephonyInfo();
+    getFlutterTelephony();
   }
 
-  Future<void> getTelephonyInfo() async {
-    TelephonyInfo info;
+  Future<void> getFlutterTelephony() async {
+    FlutterTelephony info;
     try {
-      info = await FltTelephonyInfo.info;
+      info = await FltFlutterTelephony.info;
     } on PlatformException {}
 
     if (!mounted) return;

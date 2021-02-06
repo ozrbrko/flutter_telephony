@@ -1,18 +1,18 @@
-#import "FltTelephonyInfoPlugin.h"
+#import "FltFlutterTelephonyPlugin.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 
-@implementation FltTelephonyInfoPlugin
+@implementation FltFlutterTelephonyPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"bughub.dev/flutter_telephony"
             binaryMessenger:[registrar messenger]];
-  FltTelephonyInfoPlugin* instance = [[FltTelephonyInfoPlugin alloc] init];
+  FltFlutterTelephonyPlugin* instance = [[FltFlutterTelephonyPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-  if ([@"getTelephonyInfo" isEqualToString:call.method]) {
+  if ([@"getFlutterTelephony" isEqualToString:call.method]) {
       CTTelephonyNetworkInfo *networkInfo = [[CTTelephonyNetworkInfo alloc]init];
       
       NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];

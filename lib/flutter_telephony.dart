@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 
-class FltTelephonyInfo {
+class FltFlutterTelephony {
   static const MethodChannel _channel =
       const MethodChannel('bughub.dev/flutter_telephony');
 
-  static Future<TelephonyInfo> get info async {
-    final TelephonyInfo telephonyInfo = TelephonyInfo.fromMap(
-        await _channel.invokeMapMethod<String, dynamic>('getTelephonyInfo'));
-    print(telephonyInfo.toString());
-    return telephonyInfo;
+  static Future<FlutterTelephony> get info async {
+    final FlutterTelephony flutterTelephony = FlutterTelephony.fromMap(
+        await _channel.invokeMapMethod<String, dynamic>('getFlutterTelephony'));
+    print(flutterTelephony.toString());
+    return flutterTelephony;
   }
 }
 
@@ -107,8 +107,8 @@ class PhoneType {
   static const int PHONE_TYPE_SIP = 3;
 }
 
-class TelephonyInfo {
-  TelephonyInfo._({
+class FlutterTelephony {
+  FlutterTelephony._({
     this.callState,
     this.dataNetworkType,
     this.deviceSoftwareVersion,
@@ -216,9 +216,9 @@ class TelephonyInfo {
 
   static Map<String, dynamic> _map;
 
-  static TelephonyInfo fromMap(Map<String, dynamic> map) {
+  static FlutterTelephony fromMap(Map<String, dynamic> map) {
     _map = map;
-    return TelephonyInfo._(
+    return FlutterTelephony._(
       callState: map["callState"],
       dataNetworkType: map["dataNetworkType"],
       deviceSoftwareVersion: map["deviceSoftwareVersion"],
