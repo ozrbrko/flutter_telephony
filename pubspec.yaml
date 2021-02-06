@@ -1,6 +1,6 @@
 name: flutter_telephony
 description: A new Flutter plugin , get telephony info ,based on TelephonyManager in Android and based on CoreTelephony in iOS
-version: 0.0.3
+version: 0.0.6
 homepage: https://github.com/aliazimoshan/flutter_telephony
 repository: https://github.com/aliazimoshan/flutter_telephony
 
