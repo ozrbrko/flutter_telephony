@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="03a92247-5646-43ec-ace0-0a8ca7fc722a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_CN.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/me/AliAzim/flutter_telephony/FltTelephonyInfoPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/me/AliAzim/flutter_telephony/FltFlutterTelephonyPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FltTelephonyInfoPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FltTelephonyInfoPlugin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FltTelephonyInfoPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FltTelephonyInfoPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_telephony.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_telephony.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/flt_telephony_info_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/flt_telephony_info_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +74,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="212" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612603652723" />
-    <state x="391" y="81" width="583" height="624" key="find.popup" timestamp="1612602958720">
+    <state x="391" y="81" width="583" height="624" key="find.popup" timestamp="1612605443385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="81" width="583" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1612602958720" />
+    <state x="391" y="81" width="583" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1612605443385" />
   </component>
 </project>
