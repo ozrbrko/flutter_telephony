@@ -273,15 +273,35 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                     val mcc = net.substring(0, 3)
                     val mnc = net.substring(3)
 
-                    cellLocation.clear()
-                    cellLocation.add("CDMA")
-                    cellLocation.add(mcc.toString())
-                    cellLocation.add(mnc.toString())
-                    cellLocation.add(allCellLocation.lac.toString())
-                    cellLocation.add(allCellLocation.cid.toString())
-                    cellLocation.add(allCellLocation.psc.toString())
-                    resultMap["cellLocation"] = cellLocation
+                    cellInfo.clear()
+                    cellInfo.add("CDMA")
+                    cellInfo.add(mcc.toString())
+                    cellInfo.add(mnc.toString())
+                    cellInfo.add(allCellLocation.lac.toString())
+                    cellInfo.add(allCellLocation.cid.toString())
+                    cellInfo.add(allCellLocation.psc.toString())
+                    resultMap["allCellInfo"] = cellLocation
                 }
+
+
+            if (ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.READ_PHONE_STATE) == PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) == PERMISSION_GRANTED
+                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                val allCellLocation = telephonyManager.cellLocation as GsmCellLocation
+                val net = telephonyManager.networkOperator
+
+                val mcc = net.substring(0, 3)
+                val mnc = net.substring(3)
+
+                cellLocation.clear()
+                cellLocation.add("CDMA")
+                cellLocation.add(mcc.toString())
+                cellLocation.add(mnc.toString())
+                cellLocation.add(allCellLocation.lac.toString())
+                cellLocation.add(allCellLocation.cid.toString())
+                cellLocation.add(allCellLocation.psc.toString())
+                resultMap["cellLocation"] = cellLocation
+            }
 
 
 

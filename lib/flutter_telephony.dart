@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 
-class FltFlutterTelephony {
+class FlutterTelephonyInfo {
   static const MethodChannel _channel =
       const MethodChannel('bughub.dev/flutter_telephony');
 
-  static Future<FlutterTelephony> get info async {
+  static Future<FlutterTelephony> get get async {
     final FlutterTelephony flutterTelephony = FlutterTelephony.fromMap(
         await _channel.invokeMapMethod<String, dynamic>('getFlutterTelephony'));
     print(flutterTelephony.toString());
