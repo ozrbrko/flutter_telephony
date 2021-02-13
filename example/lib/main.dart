@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> getFlutterTelephony() async {
     FlutterTelephony info;
     try {
-      info = await FltFlutterTelephony.info;
+      info = await FlutterTelephonyInfo.get;
     } on PlatformException {}
 
     if (!mounted) return;
@@ -37,10 +37,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Flutter Telephony example'),
         ),
-        body: Center(
-          child: Text(_info.toString()),
+        body: ListView(
+          children: [
+            Center(
+              child: Text(_info.toString()),
+            ),
+          ],
         ),
       ),
     );
