@@ -7,8 +7,6 @@ Android:based on TelephonyManager
 iOS：based on [CoreTelephony](https://developer.apple.com/documentation/coretelephony)
 
 
-## [README](https://github.com/aliazimoshan/flutter_telephony/blob/master/README_CN.md)
-
 ## Installation
 ```
 //pub
@@ -19,12 +17,12 @@ dependencies:
 dependencies:
   flutter_telephony:
     git:
-      url: git://github.com/RandyWei/flutter_telephony.git
+      url: git://github.com/aliazimoshan/flutter_telephony.git
 ```
 
 ## Android
 
-  cellInfo
+  cellInfo || cellLocation(If cellInfo return null ,this package fill cellLocation, in old android SDK this might happened)
 
   Requires permission:android.permission.ACCESS_FINE_LOCATION
 
@@ -78,6 +76,7 @@ dependencies:
 <manifest
     ...
     xmlns:tools="http://schemas.android.com/tools" >
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
@@ -164,8 +163,3 @@ class _MyAppState extends State<MyApp> {
 }
 
 ```
-
-## Other
-[Home Page](https://www.bughub.dev)
-
-[Video Player Based On TxVodPlayer](https://pub.flutter-io.cn/packages/flt_video_player)

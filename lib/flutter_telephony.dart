@@ -135,6 +135,7 @@ class FlutterTelephony {
     this.simOperatorName,
     this.simSerialNumber,
     this.cellInfo,
+    this.cellLocation,
   });
 
   ///当前电话状态
@@ -212,7 +213,11 @@ class FlutterTelephony {
   String simSerialNumber;
 
   //CELL INFO
-  CellInfo cellInfo;
+  List<CellInfo> cellInfo;
+
+  // //Cell Location
+
+  List<CellInfo> cellLocation;
 
   static Map<String, dynamic> _map;
 
@@ -244,6 +249,7 @@ class FlutterTelephony {
       simOperatorName: map["simOperatorName"],
       simSerialNumber: map["simSerialNumber"],
       cellInfo: CellInfo.fromList(map["allCellInfo"]) ?? null,
+      cellLocation: CellInfo.fromList(map["cellLocation"]) ?? null,
     );
   }
 
@@ -279,12 +285,8 @@ class FlutterTelephony {
         "\nsimOperator:$simOperator,"
         "\nsimOperatorName:$simOperatorName,"
         "\nsimSerialNumber:$simSerialNumber"
-        "\ncellInfo.radio:${cellInfo.radio}"
-        "\ncellInfo.mcc:${cellInfo.mcc}"
-        "\ncellInfo.mnc:${cellInfo.mnc}"
-        "\ncellInfo.tac:${cellInfo.tac}"
-        "\ncellInfo.ci:${cellInfo.ci}"
-        "\ncellInfo.pci:${cellInfo.pci}"
+        "\ncellInfo:$cellInfo"
+        "\ncellLocation:$cellLocation"
         "\n}";
   }
 }
@@ -308,14 +310,34 @@ class CellInfo {
     this.pci,
   });
 
-  static CellInfo fromList(List<dynamic> list) {
-    return CellInfo._(
-      radio: list != null ? list[0] : null,
-      mcc: list != null ? list[1] : null,
-      mnc: list != null ? list[2] : null,
-      tac: list != null ? list[3] : null,
-      ci: list != null ? list[4] : null,
-      pci: list != null ? list[5] : null,
-    );
+  static List<CellInfo> fromList(List<dynamic> list) {
+    List<CellInfo> cellInfoList = [];
+    if (list != null)
+      for (int i = 0; i < list.length / 6; i++) {
+        cellInfoList.add(
+          CellInfo._(
+            radio: list != null ? list[i * 6] : null,
+            mcc: list != null ? list[(i * 6) + 1] : null,
+            mnc: list != null ? list[(i * 6) + 2] : null,
+            tac: list != null ? list[(i * 6) + 3] : null,
+            ci: list != null ? list[(i * 6) + 4] : null,
+            pci: list != null ? list[(i * 6) + 5] : null,
+          ),
+        );
+      }
+    return cellInfoList;
+  }
+
+  @override
+  String toString() {
+    super.toString();
+    return "{"
+        "\nmcc:$mcc,"
+        "\nmnc:$mnc,"
+        "\nradio:$radio,"
+        "\ntac:$tac,"
+        "\nci:$ci,"
+        "\npci:$pci,"
+        "\n}";
   }
 }

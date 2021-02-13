@@ -18,8 +18,10 @@ import me.AliAzim.flutter_telephony.model.request.RadioType
 import android.telephony.CellInfoGsm
 import android.telephony.CellInfoLte
 import android.telephony.CellInfoWcdma
+import android.telephony.gsm.GsmCellLocation
 
 val cellInfo = mutableListOf<String>();
+val cellLocation = mutableListOf<String>();
 
 class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
     companion object {
@@ -248,6 +250,7 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                     && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 val allCellInfo = telephonyManager.allCellInfo
 //                List<CellInfo> cf ;
+                cellInfo.clear()
                 allCellInfo.forEach{
                     when (it) {
                         is CellInfoGsm -> getCellInfo(it)
@@ -259,6 +262,27 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
 //                println(telephonyManager.allCellInfo[0])
                 resultMap["allCellInfo"] = cellInfo
             }
+
+            if(cellInfo.count() == 0)
+                if (ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.READ_PHONE_STATE) == PERMISSION_GRANTED ||
+                        ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) == PERMISSION_GRANTED
+                        && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    val allCellLocation = telephonyManager.cellLocation as GsmCellLocation
+                    val net = telephonyManager.networkOperator
+
+                    val mcc = net.substring(0, 3)
+                    val mnc = net.substring(3)
+
+                    cellLocation.clear()
+                    cellLocation.add("CDMA")
+                    cellLocation.add(mcc.toString())
+                    cellLocation.add(mnc.toString())
+                    cellLocation.add(allCellLocation.lac.toString())
+                    cellLocation.add(allCellLocation.cid.toString())
+                    cellLocation.add(allCellLocation.psc.toString())
+                    resultMap["cellLocation"] = cellLocation
+                }
+
 
 
 
@@ -280,8 +304,7 @@ fun getCellInfo(info: CellInfoGsm): MutableList<String> {
 //        cellInfo.mcc = mcc
 //        cellInfo.mnc = mnc
 //        cellInfo.cells = listOf(Cell(it.lac, it.cid, it.psc))
-        if (mcc!=0||mnc!=0){
-            cellInfo.clear()
+        if (mcc!=0 && mnc!=0 && it.lac != 0 && it.cid != 0){
             cellInfo.add(RadioType.GSM)
             cellInfo.add(mcc.toString())
             cellInfo.add(mnc.toString())
@@ -305,8 +328,7 @@ fun getCellInfo(info: CellInfoWcdma): MutableList<String> {
 //        cellInfo.mcc = mcc
 //        cellInfo.mnc = mnc
 //        cellInfo.cells = listOf(Cell(it.lac, it.cid, it.psc))
-        if (mcc!=0||mnc!=0){
-            cellInfo.clear()
+        if (mcc!=0 && mnc!=0 && it.lac != 0 && it.cid != 0){
             cellInfo.add(RadioType.CDMA)
             cellInfo.add(mcc.toString())
             cellInfo.add(mnc.toString())
@@ -328,8 +350,7 @@ fun getCellInfo(info: CellInfoLte):MutableList<String>{
             Pair(it.mcc, it.mnc)
         }
 
-        if (mcc != 0 || mnc != 0){
-            cellInfo.clear()
+        if (mcc!=0 && mnc!=0 && it.tac != 0 && it.ci != 0){
             cellInfo.add(RadioType.LTE)
             cellInfo.add(mcc.toString())
             cellInfo.add(mnc.toString())
