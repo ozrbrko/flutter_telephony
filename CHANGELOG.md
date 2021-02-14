@@ -16,3 +16,6 @@
 
 * Add cellLocation as backup of allCellInfo
 
+## 0.0.9
+
+* fix in ios
