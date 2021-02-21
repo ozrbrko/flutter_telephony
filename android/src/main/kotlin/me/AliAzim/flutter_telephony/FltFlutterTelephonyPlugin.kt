@@ -283,7 +283,7 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                     cellInfo.add(allCellLocation.cid.toString())
                     cellInfo.add(allCellLocation.psc.toString())
                     if(allCellLocation.cid > 50 && allCellLocation.cid != 2147483647)
-                    resultMap["allCellInfo"] = cellLocation
+                    resultMap["allCellInfo"] = cellInfo
                 }
 
 
