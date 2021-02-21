@@ -19,3 +19,9 @@
 ## 0.0.9
 
 * fix in ios
+
+## 0.0.10
+
+## 0.0.11
+
+* remove every thing expect cellInfo
