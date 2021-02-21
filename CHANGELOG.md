@@ -25,3 +25,7 @@
 ## 0.0.11
 
 * remove every thing expect cellInfo
+
+## 0.0.12
+
+* filter some wrong cellInfo cid data

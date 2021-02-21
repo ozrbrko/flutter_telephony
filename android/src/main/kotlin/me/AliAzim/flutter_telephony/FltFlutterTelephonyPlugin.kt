@@ -282,6 +282,7 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                     cellInfo.add(allCellLocation.lac.toString())
                     cellInfo.add(allCellLocation.cid.toString())
                     cellInfo.add(allCellLocation.psc.toString())
+                    if(allCellLocation.cid > 50 && allCellLocation.cid != 2147483647)
                     resultMap["allCellInfo"] = cellLocation
                 }
 
@@ -326,7 +327,7 @@ fun getCellInfo(info: CellInfoGsm): MutableList<String> {
 //        cellInfo.mcc = mcc
 //        cellInfo.mnc = mnc
 //        cellInfo.cells = listOf(Cell(it.lac, it.cid, it.psc))
-        if (mcc!=0 && mnc!=0 && it.lac != 0 && it.cid != 0){
+        if (mcc!=0 && mnc!=0 && it.lac != 0 && it.cid > 50 && it.cid != 2147483647){
             cellInfo.add(RadioType.GSM)
             cellInfo.add(mcc.toString())
             cellInfo.add(mnc.toString())
@@ -350,7 +351,7 @@ fun getCellInfo(info: CellInfoWcdma): MutableList<String> {
 //        cellInfo.mcc = mcc
 //        cellInfo.mnc = mnc
 //        cellInfo.cells = listOf(Cell(it.lac, it.cid, it.psc))
-        if (mcc!=0 && mnc!=0 && it.lac != 0 && it.cid != 0){
+        if (mcc!=0 && mnc!=0 && it.lac != 0 && it.cid > 50 && it.cid != 2147483647){
             cellInfo.add(RadioType.CDMA)
             cellInfo.add(mcc.toString())
             cellInfo.add(mnc.toString())
@@ -372,7 +373,7 @@ fun getCellInfo(info: CellInfoLte):MutableList<String>{
             Pair(it.mcc, it.mnc)
         }
 
-        if (mcc!=0 && mnc!=0 && it.tac != 0 && it.ci != 0){
+        if (mcc!=0 && mnc!=0 && it.tac != 0 && it.ci > 50 && it.ci != 2147483647){
             cellInfo.add(RadioType.LTE)
             cellInfo.add(mcc.toString())
             cellInfo.add(mnc.toString())
