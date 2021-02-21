@@ -29,3 +29,7 @@
 ## 0.0.12
 
 * filter some wrong cellInfo cid data
+
+## 0.0.13
+
+* fix bug for showing cellLocation
