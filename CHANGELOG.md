@@ -33,3 +33,7 @@
 ## 0.0.13
 
 * fix bug for showing cellLocation
+
+## 0.0.14
+
+* fix cellLocation for old devices(ex android 4)

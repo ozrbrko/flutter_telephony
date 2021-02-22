@@ -252,6 +252,7 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                 val allCellInfo = telephonyManager.allCellInfo
 //                List<CellInfo> cf ;
                 cellInfo.clear()
+                if(allCellInfo !=null)
                 allCellInfo.forEach{
                     when (it) {
                         is CellInfoGsm -> getCellInfo(it)
@@ -261,6 +262,7 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                     }
                 }
 //                println(telephonyManager.allCellInfo[0])
+            if(cellInfo.count() != 0)
                 resultMap["allCellInfo"] = cellInfo
             }
 
