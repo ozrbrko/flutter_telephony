@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a92247-5646-43ec-ace0-0a8ca7fc722a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/me/AliAzim/flutter_telephony/FltFlutterTelephonyPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/me/AliAzim/flutter_telephony/FltFlutterTelephonyPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_telephony.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_telephony.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,22 +76,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="351" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1624096022432" />
-    <state width="1397" height="240" key="GridCell.Tab.0.bottom" timestamp="1624099698839">
+    <state width="1397" height="240" key="GridCell.Tab.0.bottom" timestamp="1624100776055">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="240" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
-    <state width="1397" height="240" key="GridCell.Tab.0.center" timestamp="1624099698839">
+    <state width="1397" height="240" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1624100776055" />
+    <state width="1397" height="240" key="GridCell.Tab.0.center" timestamp="1624100776054">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="240" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
-    <state width="1397" height="240" key="GridCell.Tab.0.left" timestamp="1624099698839">
+    <state width="1397" height="240" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1624100776054" />
+    <state width="1397" height="240" key="GridCell.Tab.0.left" timestamp="1624100776054">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="240" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
-    <state width="1397" height="240" key="GridCell.Tab.0.right" timestamp="1624099698839">
+    <state width="1397" height="240" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1624100776054" />
+    <state width="1397" height="240" key="GridCell.Tab.0.right" timestamp="1624100776054">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="240" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
+    <state width="1397" height="240" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1624100776054" />
     <state x="72" y="75" key="SettingsEditor" timestamp="1623846617076">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

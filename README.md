@@ -137,7 +137,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> getFlutterTelephony() async {
     FlutterTelephony info;
     try {
-      info = await FltFlutterTelephony.info;
+      info = await FlutterTelephony.info;
     } on PlatformException {}
 
     if (!mounted) return;
