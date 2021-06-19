@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> getFlutterTelephony() async {
     FlutterTelephony info;
     try {
-      info = await FlutterTelephonyInfo.get;
+      info = await FlutterTelephonyInfo.get("samsung+ SM-G532G");
     } on PlatformException {}
 
     if (!mounted) return;

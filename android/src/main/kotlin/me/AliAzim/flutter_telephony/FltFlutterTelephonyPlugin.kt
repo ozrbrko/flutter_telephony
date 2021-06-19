@@ -22,6 +22,7 @@ import android.telephony.gsm.GsmCellLocation
 
 val cellInfo = mutableListOf<String>();
 val cellLocation = mutableListOf<String>();
+var modelName : String? = "";
 
 class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
     companion object {
@@ -266,7 +267,9 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                 resultMap["allCellInfo"] = cellInfo
             }
 
-            if(cellInfo.count() == 0)
+            modelName = call.argument("modelName");
+
+            if(cellInfo.count() == 0 || modelName == "samsung+ SM-G532F" || modelName == "samsung+ SM-G532G")
                 if (ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.READ_PHONE_STATE) == PERMISSION_GRANTED ||
                         ContextCompat.checkSelfPermission(registrar.activeContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) == PERMISSION_GRANTED
 //                        && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
@@ -278,6 +281,7 @@ class FltFlutterTelephonyPlugin(var registrar: Registrar) : MethodCallHandler {
                     val mnc = net.substring(3)
 
                     cellInfo.clear()
+                    resultMap["allCellInfo"] = cellInfo
                     cellInfo.add("CDMA")
                     cellInfo.add(mcc.toString())
                     cellInfo.add(mnc.toString())

@@ -5,9 +5,11 @@ class FlutterTelephonyInfo {
   static const MethodChannel _channel =
       const MethodChannel('bughub.dev/flutter_telephony');
 
-  static Future<FlutterTelephony> get get async {
+  static Future<FlutterTelephony> get(String modelName) async {
     final FlutterTelephony flutterTelephony = FlutterTelephony.fromMap(
-        await _channel.invokeMapMethod<String, dynamic>('getFlutterTelephony'));
+        await _channel.invokeMapMethod<String, dynamic>(
+            'getFlutterTelephony', {'modelName': modelName}));
+
     print(flutterTelephony.toString());
     return flutterTelephony;
   }

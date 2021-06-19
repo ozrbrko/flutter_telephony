@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a92247-5646-43ec-ace0-0a8ca7fc722a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/me/AliAzim/flutter_telephony/FltFlutterTelephonyPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/me/AliAzim/flutter_telephony/FltFlutterTelephonyPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter_telephony.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_telephony.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +36,8 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SahandDriver" />
-    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -33,7 +45,7 @@
       <recent name="C:\Users\admin\Desktop\flutter_telephony\android\src\main\kotlin\dev\bughub\flt_telephony_info" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
@@ -65,41 +77,41 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="100" width="793" height="528" key="AVDManager" timestamp="1613195249279">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="94" y="100" width="958" height="660" key="AVDManager" timestamp="1624096260503">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="100" y="100" width="793" height="528" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1613195249279" />
-    <state x="527" y="170" key="FileChooserDialogImpl" timestamp="1613918213420">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="94" y="100" width="958" height="660" key="AVDManager/0.0.1440.860@0.0.1440.860" timestamp="1624096260503" />
+    <state x="351" y="185" key="FileChooserDialogImpl" timestamp="1624096022432">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="527" y="170" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613918213420" />
-    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1611495207751">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="351" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1624096022432" />
+    <state width="1397" height="240" key="GridCell.Tab.0.bottom" timestamp="1624099698839">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.728@0.0.1366.728" timestamp="1611495207751" />
-    <state width="1002" height="187" key="GridCell.Tab.0.bottom" timestamp="1613919236152">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1397" height="240" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
+    <state width="1397" height="240" key="GridCell.Tab.0.center" timestamp="1624099698839">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1002" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613919236152" />
-    <state width="1002" height="187" key="GridCell.Tab.0.center" timestamp="1613919236152">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1397" height="240" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
+    <state width="1397" height="240" key="GridCell.Tab.0.left" timestamp="1624099698839">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1002" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613919236152" />
-    <state width="1002" height="187" key="GridCell.Tab.0.left" timestamp="1613919236152">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1397" height="240" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
+    <state width="1397" height="240" key="GridCell.Tab.0.right" timestamp="1624099698839">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1002" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613919236152" />
-    <state width="1002" height="187" key="GridCell.Tab.0.right" timestamp="1613919236152">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1397" height="240" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1624099698839" />
+    <state x="72" y="75" key="SettingsEditor" timestamp="1623846617076">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1002" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613919236152" />
-    <state x="36" y="9" key="SettingsEditor" timestamp="1613888000443">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="72" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1623846617076" />
+    <state x="279" y="147" width="583" height="566" key="find.popup" timestamp="1624098580357">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="36" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1613888000443" />
-    <state x="391" y="81" width="583" height="624" key="find.popup" timestamp="1613197229082">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="279" y="147" width="583" height="566" key="find.popup/0.0.1440.860@0.0.1440.860" timestamp="1624098580357" />
+    <state x="235" y="197" key="run.anything.popup" timestamp="1624077926986">
+      <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="391" y="81" width="583" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1613197229082" />
+    <state x="235" y="197" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1624077926986" />
   </component>
 </project>
