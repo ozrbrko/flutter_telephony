@@ -268,7 +268,7 @@ class FlutterTelephony {
       simOperator: map["simOperator"],
       simOperatorName: map["simOperatorName"],
       simSerialNumber: map["simSerialNumber"],
-      cellInfo: CellInfo.fromList(map["allCellInfo"]),
+      cellInfo:map["allCellInfo"] != null ? CellInfo.fromList(map["allCellInfo"]) :[]
       // cellLocation: CellInfo.fromList(map["cellLocation"]),
     );
   }
